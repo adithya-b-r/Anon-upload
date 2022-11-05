@@ -5,7 +5,7 @@ read -p "Enter the file name to upload : " f
 file=$(pwd)/$f
 
 if [[ -a ${file} ]]; then
-res=$(curl -s -F "file=@$f" https://api.anonfiles.com/upload | jq '.'>
+res=$(curl -s -F "file=@$f" https://api.anonfiles.com/upload | jq '.')
 else
 echo "File $f is not found"
 fi
